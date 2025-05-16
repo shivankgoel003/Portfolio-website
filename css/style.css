@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Using a common sans-serif font */
+    line-height: 1.6; /* Slightly adjusted line height for readability */
+    color: #333;
+    background-color: #f4f4f4; /* Lighter background */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0d4d4d;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Keep logo left, links can be pushed right */
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #e0f2f2; /* A lighter shade of your primary color */
+    padding: 6rem 2rem; /* Increased padding to accommodate contact links */
+    text-align: center;
+}
+
+.hero-overlay {
+    color: #0d4d4d; /* Darker text on light background */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem; /* Slightly smaller font size */
+    margin-bottom: 0.5rem;
+}
+
+.hero-overlay h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem; /* Add space below title */
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem; /* Add some space above the icons */
+}
+
+.contact-links a {
+    color: #0d4d4d;
+    font-size: 1.5rem; /* Adjust icon size */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #333; /* Darken on hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white; /* White background for content area */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Subtle shadow for separation */
+    border-radius: 8px; /* Optional: slightly rounded corners */
+}
+
+.about-section img {
+    width: 150px; /* Slightly smaller profile image */
+    border-radius: 50%;
+    float: left;
+    margin-right: 1.5rem; /* Adjusted margin */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.about-text h2, .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0d4d4d;
+    clear: left; /* Ensure heading starts below the floated image */
+}
+
+.about-text p, .about-section p {
+    margin-bottom: 1.2rem; /* Adjusted margin */
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    background-color: #0d4d4d;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .about-section img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .about-text h2, .about-section h2 {
+        clear: none; /* Reset clear for smaller screens */
+        text-align: center; /* Center heading on smaller screens */
+    }
+
+    .hero-overlay {
+        padding: 4rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-links {
+        margin-top: 1rem;
+        font-size: 1.3rem; /* Adjust icon size for smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center; /* Center navigation links on smaller screens */
+    }
+
+    .nav-container {
+        flex-direction: column; /* Stack logo and links on smaller screens */
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem; /* Add space below logo on smaller screens */
+    }
+}
