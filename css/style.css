@@ -195,6 +195,34 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.projects-section {
+  background-color: #f2f2f2;  /* Light background */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.projects-header {
+  margin-bottom: 3rem;
+}
+
+.projects-label {
+  display: block;
+  color: #e6007e; /* Pink accent */
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.projects-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

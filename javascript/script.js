@@ -1,6 +1,6 @@
 // js/script.js
 
-const text = "Hey there! Nice to see you ...";
+const text = "Hey there! Nice to see you on this side of the screen :)";
 const typingElement = document.getElementById("typing-text");
 let index = 0;
 
