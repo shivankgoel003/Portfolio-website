@@ -88,6 +88,25 @@ body {
     color: #0d4d4d;
 }
 
+.icon-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon-links a {
+  color: black;
+  font-size: 2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon-links a:hover {
+  transform: scale(1.2);
+  color: #ffc107;
+}
+
+
 .more-btn {
     background: transparent;
     color: #0d4d4d;
