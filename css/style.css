@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Using a common sans-serif font */
-    line-height: 1.6; /* Slightly adjusted line height for readability */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4; /* Lighter background */
+    background-color: #f4f4f4;
 }
 
 /* Navbar */
@@ -24,7 +24,7 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Keep logo left, links can be pushed right */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -50,76 +50,109 @@ body {
     color: #ffc107;
 }
 
-/* Hero Section */
 .hero-section {
-    background-color: #e0f2f2; /* A lighter shade of your primary color */
-    padding: 6rem 2rem; /* Increased padding to accommodate contact links */
+    background-color: #e0f2f2; /* Light clean background */
+    padding: 6rem 2rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hero-overlay {
-    color: #0d4d4d; /* Darker text on light background */
+    color: #0d4d4d;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hero-overlay h1 {
-    font-size: 2.5rem; /* Slightly smaller font size */
+.intro-text {
+    color: #ff0080;
+    font-weight: bold;
+    letter-spacing: 2px;
     margin-bottom: 0.5rem;
 }
 
-.hero-overlay h2 {
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
     font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem; /* Add space below title */
-}
-
-.contact-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem; /* Add some space above the icons */
-}
-
-.contact-links a {
+    margin-bottom: 2rem;
+    font-weight: 500;
     color: #0d4d4d;
-    font-size: 1.5rem; /* Adjust icon size */
-    text-decoration: none;
+}
+
+.more-btn {
+    background: transparent;
+    color: #0d4d4d;
+    border: 2px solid #0d4d4d;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.more-btn:hover {
+    background: #0d4d4d;
+    color: white;
+}
+
+/* Contact Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.contact-icons a {
+    color: #0d4d4d;
     transition: color 0.3s;
 }
 
-.contact-links a:hover {
-    color: #333; /* Darken on hover */
+.contact-icons a:hover {
+    color: #ff0080;
 }
+
+
 
 /* About Section */
 .about-section {
     padding: 4rem 2rem;
     max-width: 1000px;
     margin: auto;
-    background-color: white; /* White background for content area */
-    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Subtle shadow for separation */
-    border-radius: 8px; /* Optional: slightly rounded corners */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
 .about-section img {
-    width: 150px; /* Slightly smaller profile image */
+    width: 150px;
     border-radius: 50%;
     float: left;
-    margin-right: 1.5rem; /* Adjusted margin */
+    margin-right: 1.5rem;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.about-text h2, .about-section h2 {
+.about-text h2,
+.about-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #0d4d4d;
-    clear: left; /* Ensure heading starts below the floated image */
+    clear: left;
 }
 
-.about-text p, .about-section p {
-    margin-bottom: 1.2rem; /* Adjusted margin */
+.about-text p,
+.about-section p {
+    margin-bottom: 1.2rem;
     text-align: justify;
 }
 
@@ -143,6 +176,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
 /* Responsive */
 @media (max-width: 768px) {
     .about-section {
@@ -155,41 +189,46 @@ footer a:hover {
         margin: 0 auto 1.5rem auto;
     }
 
-    .about-text h2, .about-section h2 {
-        clear: none; /* Reset clear for smaller screens */
-        text-align: center; /* Center heading on smaller screens */
+    .about-text h2,
+    .about-section h2 {
+        clear: none;
+        text-align: center;
     }
 
     .hero-overlay {
-        padding: 4rem 1rem; /* Adjust padding for smaller screens */
+        padding: 4rem 1rem;
     }
 
-    .hero-overlay h1 {
-        font-size: 2rem;
+    .hero-title {
+        font-size: 2.5rem;
     }
 
-    .hero-overlay h2 {
+    .hero-subtitle {
         font-size: 1rem;
         margin-bottom: 1rem;
     }
 
-    .contact-links {
-        margin-top: 1rem;
-        font-size: 1.3rem; /* Adjust icon size for smaller screens */
+    .contact-icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        gap: 1rem;
     }
 
     .nav-links {
         flex-direction: column;
         gap: 0.8rem;
-        text-align: center; /* Center navigation links on smaller screens */
+        text-align: center;
     }
 
     .nav-container {
-        flex-direction: column; /* Stack logo and links on smaller screens */
+        flex-direction: column;
         align-items: center;
     }
 
     .logo {
-        margin-bottom: 1rem; /* Add space below logo on smaller screens */
+        margin-bottom: 1rem;
     }
+
 }
+
