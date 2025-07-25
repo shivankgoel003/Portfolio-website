@@ -5,16 +5,26 @@
     box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #0d4d4d; 
+  --secondary-color: #1a8a8a; 
+  --text-dark: #333333;     
+  --text-light: #555555;     
+  --background-light: #f7f9f9; 
+  --background-hero: #eef3f3; 
+  --white: #ffffff;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lato','Helvetica Neue', sans-serif;
     line-height: 1.6;
-    color: #333;
+     color: var(--text-dark); 
     background-color: #f4f4f4;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #0d4d4d;
+    background-color: var(--primary-color);
     color: white;
     padding: 1rem 2rem;
     position: sticky;
@@ -51,13 +61,18 @@ body {
 }
 
 .hero-section {
-    background-color: #e0f2f2; /* Light clean background */
+     background-color: var(--background-hero); 
     padding: 6rem 2rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 6rem 1rem;
 }
 
 .hero-overlay {
@@ -69,23 +84,28 @@ body {
 }
 
 .intro-text {
-    color: #ff0080;
+    color: #2c3e50;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
 }
 
 .hero-title {
+    color: var(--primary-color);
+     font-family: 'Lora', 'Georgia', serif;
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    color: #0d4d4d;
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.15rem); 
+  font-weight: 400; 
+  line-height: 1.6; 
+   color: var(--text-dark);
+  max-width: 600px; 
+  margin: 1rem auto 2.5rem; 
 }
 
 .icon-links {
@@ -115,7 +135,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 2rem;
-    transition: background 0.3s, color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .more-btn:hover {
@@ -154,11 +174,19 @@ body {
 }
 
 .about-section img {
-    width: 150px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 1.5rem;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Ensure it's a square or circle */
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 1.5rem; /* Adds space below the image */
+  border: 3px solid #0d4d4d; /* Optional: adds a border */
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column; /* Stacks image and text vertically */
+  align-items: center; /* Centers items horizontally */
+  text-align: center; /* Centers the text */
+  padding: 4rem 2rem;
 }
 
 .about-text h2,
